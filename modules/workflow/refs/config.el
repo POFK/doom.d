@@ -49,6 +49,10 @@
 
 (map! :leader "f a"#'helm-bibtex)  ; "find article" : opens up helm bibtex for search.
 
+;; set for compile latex with bibtex
+(setq org-latex-pdf-process
+  '("latexmk -pdflatex='pdflatex -interaction nonstopmode' -pdf -bibtex -f %f"))
+
 (setq orb-templates
       '(("r" "ref" plain (function org-roam-capture--get-point) ""
          :file-name "${citekey}"
