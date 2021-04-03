@@ -48,6 +48,7 @@
     )
 
 (map! :leader "f a"#'helm-bibtex)  ; "find article" : opens up helm bibtex for search.
+(map! :leader "i l"#'doi-utils-update-bibtex-entry-from-doi)
 
 ;; set for compile latex with bibtex
 (setq org-latex-pdf-process
