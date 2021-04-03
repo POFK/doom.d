@@ -100,7 +100,9 @@
   (setq org-agenda-custom-commands
         `(("g" "GTD"
            ((agenda ""
-                    ((org-agenda-span 10)
+                    ((org-agenda-span 4)
+                     (org-agenda-start-on-weekday nil)
+                     (org-agenda-start-day "-3d")
                      (org-deadline-warning-days 365)))
             (tags "INBOX"
                   ((org-agenda-overriding-header "Inbox")
