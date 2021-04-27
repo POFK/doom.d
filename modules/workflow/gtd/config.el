@@ -185,3 +185,12 @@
   (interactive)
   "Capture a task in agenda mode."
   (org-capture nil "i"))
+
+
+;; auto save file when quit agenda
+(defmacro gtd-autosave-quit (fnc)
+  "Return function that ignores its arguments and invokes FNC."
+  `(lambda (&rest _rest)
+     (funcall ,fnc)))
+
+(advice-add 'org-agenda-quit  :after (gtd-autosave-quit #'org-save-all-org-buffers))
