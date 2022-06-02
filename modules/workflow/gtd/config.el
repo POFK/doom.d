@@ -103,7 +103,7 @@
                     ((org-agenda-span 4)
                      (org-agenda-start-on-weekday nil)
                      (org-agenda-start-day "-3d")
-                     (org-deadline-warning-days 365)))
+                     (org-deadline-warning-days 60)))
             (tags "INBOX"
                   ((org-agenda-overriding-header "Inbox")
                    (org-agenda-files '(, (expand-file-name txmao/gtd-inbox-file)))
@@ -188,9 +188,9 @@
 
 
 ;; auto save file when quit agenda
-(defmacro gtd-autosave-quit (fnc)
-  "Return function that ignores its arguments and invokes FNC."
-  `(lambda (&rest _rest)
-     (funcall ,fnc)))
-
-(advice-add 'org-agenda-quit  :after (gtd-autosave-quit #'org-save-all-org-buffers))
+;;(defmacro gtd-autosave-quit (fnc)
+;;  "Return function that ignores its arguments and invokes FNC."
+;;  `(lambda (&rest _rest)
+;;     (funcall ,fnc)))
+;;
+;;(advice-add 'org-agenda-quit  :after (gtd-autosave-quit #'org-save-all-org-buffers))

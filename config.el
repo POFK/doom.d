@@ -22,8 +22,11 @@
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
 
-(setq doom-font (font-spec :family "monospace" :size 20 :weight 'semi-light)
-      doom-variable-pitch-font (font-spec :family "sans" :size 21))
+;;(setq doom-font (font-spec :family "monospace" :size 20 :weight 'semi-light)
+;;      doom-variable-pitch-font (font-spec :family "sans" :size 21))
+
+(setq doom-font (font-spec :family "monospace" :size 32 :weight 'semi-light)
+      doom-variable-pitch-font (font-spec :family "sans" :size 32))
 
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
@@ -79,3 +82,47 @@
 
 (add-to-list 'org-link-abbrev-alist
              '("arxiv" . "http://nexus.storage.datalab/repository/arxivproxy/%s.pdf"))
+
+
+;; emacs TCP server
+;;(setq server-use-tcp t
+;;      server-host "127.0.0.1"
+;;      server-port 31415)
+
+(server-start)
+
+;; insert css for org html export
+(defun my-org-inline-css-hook (exporter)
+  "Insert custom inline css"
+  (when (eq exporter 'html)
+    (let* ((dir (ignore-errors (file-name-directory (buffer-file-name))))
+           (path (concat dir "customize.css"))
+           (homestyle (or (null dir) (null (file-exists-p path))))
+           (final (if homestyle "~/org/css/customize.css" path))) ;; <- set your own style file path
+      (setq org-html-head-include-default-style nil)
+      (setq org-html-head (concat
+                           "<style type=\"text/css\">\n"
+                           "<!--/*--><![CDATA[/*><!--*/\n"
+                           (with-temp-buffer
+                             (insert-file-contents final)
+                             (buffer-string))
+                           "/*]]>*/-->\n"
+                           "</style>\n")))))
+
+(add-hook 'org-export-before-processing-hook 'my-org-inline-css-hook)
+(set-background-color nil)
+
+;; add setting for pushing org
+(setq org-publish-project-alist
+     '(("roam"
+        :base-directory "~/org/roam"
+        :publishing-function org-html-publish-to-html
+        :publishing-directory "~/Desktop/public"
+        :section-numbers nil
+        :table-of-contents nil
+        :recursive t
+        :auto-sitemap t
+        :makeindex t
+        :style "<link rel=\"stylesheet\"
+               href=\"~/org/css/customize.css\"
+               type=\"text/css\"/>")))
