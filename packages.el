@@ -49,8 +49,8 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
-(package! org-roam
-  :recipe (:host github :repo "org-roam/org-roam"))
+(unpin! org-roam)
+(package! org-roam)
 (package! org-roam-bibtex
   :recipe (:host github :repo "org-roam/org-roam-bibtex"))
 (package! company-org-roam
@@ -59,3 +59,6 @@
 (package! org-roam-server
   :recipe (:host github :repo "org-roam/org-roam-server"))
 (package! org-gcal)
+
+(package! org-roam-ui
+  :recipe (:host github :repo "org-roam/org-roam-ui"))

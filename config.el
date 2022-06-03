@@ -80,8 +80,8 @@
   (+ivy/switch-buffer))
 (setq +ivy-buffer-preview t)
 
-(add-to-list 'org-link-abbrev-alist
-             '("arxiv" . "http://nexus.storage.datalab/repository/arxivproxy/%s.pdf"))
+;;(add-to-list 'org-link-abbrev-alist
+;;             '("arxiv" . "http://nexus.storage.datalab/repository/arxivproxy/%s.pdf"))
 
 
 ;; emacs TCP server
@@ -89,7 +89,7 @@
 ;;      server-host "127.0.0.1"
 ;;      server-port 31415)
 
-(server-start)
+;;(server-start)
 
 ;; insert css for org html export
 (defun my-org-inline-css-hook (exporter)
