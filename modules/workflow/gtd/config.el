@@ -155,11 +155,12 @@
 ;;--------------------------------------------------------------------------------
 
 
+;; Here, the hook order is important, the last one is called first!
 (add-hook! 'org-load-hook :append
-           #'+txmao/gtd-init-directory-hook
-           #'+txmao/gtd-init-keywards-hook
            #'+txmao/gtd-init-agenda-view-hook
            #'+txmao/gtd-init-capture-templates-hook
+           #'+txmao/gtd-init-keywards-hook
+           #'+txmao/gtd-init-directory-hook
            )
 
 (map! :map org-agenda-mode-map
