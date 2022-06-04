@@ -110,7 +110,7 @@
                            "</style>\n")))))
 
 (add-hook 'org-export-before-processing-hook 'my-org-inline-css-hook)
-(set-background-color nil)
+;;(set-background-color nil)
 
 ;; add setting for pushing org
 (setq org-publish-project-alist
