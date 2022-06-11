@@ -138,13 +138,15 @@
    (mu4e-trash-folder      . "/[Gmail]/Trash")
    (smtpmail-smtp-user     . "mtianxiang@gmail.com"))
  t)
-(setq mu4e-get-mail-command "proxychains mbsync gmail"
-      ;; get emails and index every 5 minutes
-      mu4e-update-interval 300
-	  ;; send emails with format=flowed
-	  mu4e-compose-format-flowed t
-	  ;; no need to run cleanup after indexing for gmail
-	  mu4e-index-cleanup nil
-	  mu4e-index-lazy-check t
-      ;; more sensible date format
-      mu4e-headers-date-format "%d.%m.%y")
+(after! mu4e
+  (setq mu4e-get-mail-command "proxychains -q mbsync gmail"
+        ;; get emails and index every 1 minutes
+        mu4e-update-interval 60
+	;; send emails with format=flowed
+	mu4e-compose-format-flowed t
+	;; no need to run cleanup after indexing for gmail
+	mu4e-index-cleanup nil
+	mu4e-index-lazy-check t
+        ;; more sensible date format
+        mu4e-headers-date-format "%d.%m.%y")
+  )
