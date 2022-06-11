@@ -126,3 +126,25 @@
         :style "<link rel=\"stylesheet\"
                href=\"~/org/css/customize.css\"
                type=\"text/css\"/>")))
+
+(setq org-element-use-cache nil)
+
+(setq pyim-page-tooltip 'popup)
+
+;; gmail by mu4e
+(set-email-account!
+ "gmail"
+ '((mu4e-sent-folder       . "/[Gmail]/Sent Mail")
+   (mu4e-trash-folder      . "/[Gmail]/Trash")
+   (smtpmail-smtp-user     . "mtianxiang@gmail.com"))
+ t)
+(setq mu4e-get-mail-command "proxychains mbsync gmail"
+      ;; get emails and index every 5 minutes
+      mu4e-update-interval 300
+	  ;; send emails with format=flowed
+	  mu4e-compose-format-flowed t
+	  ;; no need to run cleanup after indexing for gmail
+	  mu4e-index-cleanup nil
+	  mu4e-index-lazy-check t
+      ;; more sensible date format
+      mu4e-headers-date-format "%d.%m.%y")
