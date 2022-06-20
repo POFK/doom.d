@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: imp-sci
+# --
+import numpy as np
+import scipy as sp
