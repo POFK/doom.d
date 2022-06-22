@@ -17,7 +17,7 @@
         ("d" "default" entry "* %?"
 ;;         "%[~/.doom.d/modules/workflow/secbrain/templates/daily.org]"
          :if-new (file+head "%<%Y-%m-%d>-diary.org"
-                            "#+filetags: :diary:%<%Y>:\n\n#+title: %<%Y-%m-%d>\n %(f-read-text \"~/.doom.d/modules/workflow/secbrain/templates/daily.org\")"
+                            "#+filetags: :diary:%<%Y>:\n\n#+title: %<%Y-%m-%d>\n %[~/.doom.d/modules/workflow/secbrain/templates/daily.org]"
                             )
         )))
 

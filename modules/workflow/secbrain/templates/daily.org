@@ -1,5 +1,5 @@
 
-cite:diary
+ref:diary
 * What a day!
 ** How many hours you worked today?
 #+BEGIN: clocktable :scope agenda :maxlevel 2 :block %<%Y-%m-%d>
