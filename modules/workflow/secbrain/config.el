@@ -14,10 +14,11 @@
 (setq org-roam-dailies-directory "daily/"
       org-roam-dailies-capture-templates
       '(
-        ("d" "default" plain (function org-roam-capture--get-point)
-         "%[~/.doom.d/modules/workflow/secbrain/templates/daily.org]"
-         :file-name "daily/%<%Y-%m-%d>-diary"
-         :head "#+title: %<%Y-%m-%d>\n#+roam_tags: diary\n\n"
+        ("d" "default" entry "* %?"
+;;         "%[~/.doom.d/modules/workflow/secbrain/templates/daily.org]"
+         :if-new (file+head "%<%Y-%m-%d>-diary.org"
+                            "#+filetags: :diary:%<%Y>:\n\n#+title: %<%Y-%m-%d>\n %(f-read-text \"~/.doom.d/modules/workflow/secbrain/templates/daily.org\")"
+                            )
         )))
 
 ;; roam-ui
