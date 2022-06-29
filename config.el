@@ -155,3 +155,8 @@
         message-sendmail-extra-arguments '("--read-envelope-from")
         message-send-mail-function #'message-send-mail-with-sendmail)
   )
+
+
+;; python
+(setq conda-anaconda-home (expand-file-name "/opt/conda"))
+(setq conda-env-home-directory (expand-file-name "/opt/conda"))
