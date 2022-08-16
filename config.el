@@ -160,3 +160,9 @@
 ;; python
 (setq conda-anaconda-home (expand-file-name "/opt/conda"))
 (setq conda-env-home-directory (expand-file-name "/opt/conda"))
+
+;; golang
+(add-to-list 'load-path "/config/go/bin")
+(autoload 'go-mode "go-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
+(add-hook 'go-mode-hook #'format-all-mode)
