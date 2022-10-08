@@ -11,3 +11,9 @@
 (after! pyim
   (setq pyim-page-tooltip 'popup)
 )
+
+;; 使用搜索引擎提供的云输入法服务
+(setq pyim-cloudim 'baidu)
+
+;; 保存个人词条缓存－每天
+(run-with-timer 0 (* 24 3600) 'pyim-dcache-save-caches)
