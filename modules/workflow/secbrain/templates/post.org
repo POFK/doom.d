@@ -1,0 +1,15 @@
+#+HUGO_SECTION: posts
+#+HUGO_BASE_DIR: /config/git/myblog/txmao.vip
+#+hugo_auto_set_lastmod: t
+#+author:
+#+hugo_custom_front_matter: :author "TX Mao"
+#+hugo_custom_front_matter: :featuredImage ""
+#+hugo_custom_front_matter: :featuredImagePreview ""
+#+hugo_custom_front_matter: :hiddenFormHomePage false :hiddenFromSearch false
+#+hugo_custom_front_matter: :description "Here is the description"
+
+#+hugo_draft: true
+
+*Abstract:* /Here is the summary./
+
+#+hugo: more
