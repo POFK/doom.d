@@ -7,7 +7,7 @@
                         "#+filetags: :%<%Y>:\n\n#+title: ${title}\n"))
 	("b" "blog" plain "%?"
      	 :target (file+head "%<%Y%m%d%H%M%S>-${slug}.org"
-                            "#+filetags: \n#+date: %<%Y-%m-%d>\n#+title: ${title}\n%[~/.doom.d/modules/workflow/secbrain/templates/post.org]"))
+                            "#+title: ${title}\n\n#+filetags: \n#+date: %<%Y-%m-%d>\n#+EXPORT_FILE_NAME: ${id}\n%[~/.doom.d/modules/workflow/secbrain/templates/post.org]"))
         ("i" "Idea" plain "* Topic\n\n%?\n* Related\n\n* Main idea\n\n* How to check\n"
 	 :target (file+head "%<%Y%m%d%H%M%S>-${slug}.org"
 			     "#+filetags: :%<%Y>:\n\n#+title: ${title}\n")
