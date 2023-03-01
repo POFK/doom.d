@@ -81,7 +81,7 @@
 (setq +ivy-buffer-preview t)
 
 ;;(add-to-list 'org-link-abbrev-alist
-;;             '("arxiv" . "http://nexus.storage.datalab/repository/arxivproxy/%s.pdf"))
+;;            '("arxiv" . "http://nexus.pangu.datalab/repository/arxivproxy/%s.pdf"))
 
 
 ;; emacs TCP server
