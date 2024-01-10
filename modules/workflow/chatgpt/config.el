@@ -28,3 +28,6 @@
          :map copilot-completion-map
          ("<tab>" . 'copilot-accept-completion)
          ("TAB" . 'copilot-accept-completion)))
+
+;; add proxy
+(setq copilot-network-proxy '(:host "127.0.0.1" :port 7890))
