@@ -195,3 +195,10 @@
 ;;     (funcall ,fnc)))
 ;;
 ;;(advice-add 'org-agenda-quit  :after (gtd-autosave-quit #'org-save-all-org-buffers))
+
+;; set priority
+(setq   org-enable-priority-commands t
+    org-highest-priority ?A
+    org-default-priority ?C
+    org-lowest-priority ?D
+)

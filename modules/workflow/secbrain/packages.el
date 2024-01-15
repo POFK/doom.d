@@ -9,3 +9,5 @@
 
 ;; When using bibtex-completion via the `biblio` module
 (unpin! bibtex-completion helm-bibtex ivy-bibtex)
+
+;;(package! mu4e-views)
