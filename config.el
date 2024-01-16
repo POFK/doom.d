@@ -114,16 +114,16 @@
 
 ;; add setting for pushing org
 (setq org-publish-project-alist
-     '(("roam"
-        :base-directory "~/org/roam"
-        :publishing-function org-html-publish-to-html
-        :publishing-directory "~/Desktop/public"
-        :section-numbers nil
-        :table-of-contents nil
-        :recursive t
-        :auto-sitemap t
-        :makeindex t
-        :style "<link rel=\"stylesheet\"
+      '(("roam"
+         :base-directory "~/org/roam"
+         :publishing-function org-html-publish-to-html
+         :publishing-directory "~/Desktop/public"
+         :section-numbers nil
+         :table-of-contents nil
+         :recursive t
+         :auto-sitemap t
+         :makeindex t
+         :style "<link rel=\"stylesheet\"
                href=\"~/org/css/customize.css\"
                type=\"text/css\"/>")))
 
