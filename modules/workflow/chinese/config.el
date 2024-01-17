@@ -30,6 +30,11 @@
 ;; 保存个人词条缓存－每天
 (run-with-timer 0 (* 24 3600) 'pyim-dcache-save-caches)
 
+;; 自动保存词频，用于统计个人习惯(来自 ChatGPT, not checked)
+(setq pyim-enable-words-predict 'personal)
+(setq pyim-dcache-directory "/config/.doom.d/pyim/dcache/")
+(setq pyim-dcache-auto-save-interval 3600)
+
 ;; 设置半角标点
 (setq-default pyim-punctuation-translate-p '(auto))
 

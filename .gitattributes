@@ -1,0 +1,7 @@
+pyim/dcache/pyim-dhashcache-icode2word filter=lfs diff=lfs merge=lfs -text
+pyim/dcache/pyim-dhashcache-iword2count filter=lfs diff=lfs merge=lfs -text
+pyim/dcache/pyim-dhashcache-iword2count-log filter=lfs diff=lfs merge=lfs -text
+pyim/dcache/pyim-dhashcache-iword2priority filter=lfs diff=lfs merge=lfs -text
+pyim/dcache/pyim-dhashcache-code2word filter=lfs diff=lfs merge=lfs -text
+pyim/dcache/pyim-dhashcache-code2word-md5 filter=lfs diff=lfs merge=lfs -text
+pyim/dcache/pyim-dhashcache-word2code filter=lfs diff=lfs merge=lfs -text
