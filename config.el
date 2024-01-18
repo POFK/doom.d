@@ -80,15 +80,10 @@
   (+ivy/switch-buffer))
 (setq +ivy-buffer-preview t)
 
-;;(add-to-list 'org-link-abbrev-alist
-;;            '("arxiv" . "http://nexus.pangu.datalab/repository/arxivproxy/%s.pdf"))
-
-
 ;; emacs TCP server
 ;;(setq server-use-tcp t
-;;      server-host "127.0.0.1"
-;;      server-port 31415)
-
+;;      server-host "0.0.0.0"
+;;      server-port 21415)
 ;;(server-start)
 
 ;; insert css for org html export
@@ -166,3 +161,8 @@
 (autoload 'go-mode "go-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
 (add-hook 'go-mode-hook #'format-all-mode)
+
+;; alias for arxiv
+
+(add-to-list 'org-link-abbrev-alist
+             '("arxiv" . "http://nexus.pangu.datalab/repository/arxivproxy/%s.pdf"))
