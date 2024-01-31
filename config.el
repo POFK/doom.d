@@ -164,5 +164,5 @@
 
 ;; alias for arxiv
 
-(add-to-list 'org-link-abbrev-alist
-             '("arxiv" . "http://nexus.pangu.datalab/repository/arxivproxy/%s.pdf"))
+;;(add-to-list 'org-link-abbrev-alist
+;;             '("arxiv" . "http://nexus.pangu.datalab/repository/arxivproxy/%s.pdf"))

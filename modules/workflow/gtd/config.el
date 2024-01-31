@@ -11,7 +11,7 @@
   (setq txmao/gtd-inbox-file (expand-file-name "inbox.org" txmao/gtd-dir))
   (setq txmao/gtd-tasks-file (expand-file-name "tasks.org" txmao/gtd-dir))
   (setq txmao/gtd-read-later-file (expand-file-name "toread.org" txmao/gtd-dir))
-)
+  )
 
 (defun +txmao/gtd-init-keywards-hook ()
   (setq org-todo-keywords
@@ -42,7 +42,7 @@
           (todo   . " ")
           (tags   . " %i %-12:c")
           (search . " %i %-12:c")))
-)
+  )
 
 (defun txmao/inbox-add-feature ()
   (org-agenda-set-tags)
@@ -100,7 +100,7 @@
   (setq org-agenda-custom-commands
         `(("g" "GTD"
            ((agenda ""
-                    ((org-agenda-span 4)
+                    ((org-agenda-span 7)
                      (org-agenda-start-on-weekday nil)
                      (org-agenda-start-day "-3d")
                      (org-deadline-warning-days 60)))
@@ -198,7 +198,7 @@
 
 ;; set priority
 (setq   org-enable-priority-commands t
-    org-highest-priority ?A
-    org-default-priority ?C
-    org-lowest-priority ?D
-)
+        org-highest-priority ?A
+        org-default-priority ?C
+        org-lowest-priority ?D
+        )
