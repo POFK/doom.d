@@ -37,8 +37,8 @@
 (setq pyim-dcache-auto-save-interval 3600)
 
 ;; 设置半角标点
-;;(setq-default pyim-punctuation-translate-p '(auto))
-(setq-default pyim-punctuation-translate-p '(no)) ;; 半角字符
+(setq-default pyim-punctuation-translate-p '(auto))
+;;(setq-default pyim-punctuation-translate-p '(no)) ;; 半角字符
 ;;(setq-default pyim-punctuation-translate-p '(yes)) ;; 全角字符
 
 (setq pyim-indicator-list (list #'my-pyim-indicator-with-cursor-color #'pyim-indicator-with-modeline))
