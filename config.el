@@ -37,7 +37,7 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
+(setq org-directory "/tank/data/dataset/org/")
 
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
@@ -67,7 +67,7 @@
 (setq doom-leader-key ",")
 (setq doom-localleader-key ",")
 
-(setq org-roam-directory "~/org/roam")
+(setq org-roam-directory "/tank/data/dataset/org/roam")
 
 (if (eq initial-window-system 'x)                 ; if started by emacs command or desktop file
     (toggle-frame-maximized)
@@ -93,7 +93,7 @@
     (let* ((dir (ignore-errors (file-name-directory (buffer-file-name))))
            (path (concat dir "customize.css"))
            (homestyle (or (null dir) (null (file-exists-p path))))
-           (final (if homestyle "~/org/css/customize.css" path))) ;; <- set your own style file path
+           (final (if homestyle "/tank/data/dataset/org/css/customize.css" path))) ;; <- set your own style file path
       (setq org-html-head-include-default-style nil)
       (setq org-html-head (concat
                            "<style type=\"text/css\">\n"
@@ -110,7 +110,7 @@
 ;; add setting for pushing org
 (setq org-publish-project-alist
       '(("roam"
-         :base-directory "~/org/roam"
+         :base-directory "/tank/data/dataset/org/roam"
          :publishing-function org-html-publish-to-html
          :publishing-directory "~/Desktop/public"
          :section-numbers nil
@@ -119,7 +119,7 @@
          :auto-sitemap t
          :makeindex t
          :style "<link rel=\"stylesheet\"
-               href=\"~/org/css/customize.css\"
+               href=\"/tank/data/dataset/org/css/customize.css\"
                type=\"text/css\"/>")))
 
 (setq org-element-use-cache nil)

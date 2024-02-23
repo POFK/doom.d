@@ -2,7 +2,7 @@
 
 (use-package! org-roam-bibtex
   :after org-roam
-  :load-path "~/org/refs/lib/library.bib" ;Modify with your own path
+  :load-path "/tank/data/dataset/org/refs/lib/library.bib" ;Modify with your own path
   :hook (org-roam-mode . org-roam-bibtex-mode)
   :bind (:map org-mode-map
          (("C-c n a" . orb-note-actions))))
@@ -22,10 +22,10 @@
                                          "}")) ""))))
 (setq
  bibtex-completion-pdf-field "file"
- bibtex-completion-bibliography "~/org/refs/lib/library.bib"
- biblio-download-directory "~/org/refs/files/"
- bibtex-completion-library-path '("~/org/refs/files")
- bibtex-completion-notes-path "~/org/refs/notes"
+ bibtex-completion-bibliography "/tank/data/dataset/org/refs/lib/library.bib"
+ biblio-download-directory "/tank/data/dataset/org/refs/files/"
+ bibtex-completion-library-path '("/tank/data/dataset/org/refs/files")
+ bibtex-completion-notes-path "/tank/data/dataset/org/refs/notes"
  )
 
 (setq bibtex-completion-format-citation-functions
@@ -41,10 +41,10 @@
     :init
     ; code to run before loading org-ref
     :config
-    (setq reftex-default-bibliography '("~/org/refs/lib/library.bib")
-      org-ref-notes-directory "~/org/refs/notes"
-      org-ref-default-bibliography '("~/org/refs/lib/library.bib")
-      org-ref-pdf-directory "~/org/refs/files")
+    (setq reftex-default-bibliography '("/tank/data/dataset/org/refs/lib/library.bib")
+      org-ref-notes-directory "/tank/data/dataset/org/refs/notes"
+      org-ref-default-bibliography '("/tank/data/dataset/org/refs/lib/library.bib")
+      org-ref-pdf-directory "/tank/data/dataset/org/refs/files")
     )
 
 (map! :leader "f a"#'helm-bibtex)  ; "find article" : opens up helm bibtex for search.
