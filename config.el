@@ -166,3 +166,13 @@
 
 ;;(add-to-list 'org-link-abbrev-alist
 ;;             '("arxiv" . "http://nexus.pangu.datalab/repository/arxivproxy/%s.pdf"))
+
+
+;; open pdf using zathura in org and bibtex note
+(after! org
+  (add-to-list 'org-file-apps
+               '("\\.pdf\\'" . (lambda (file link)
+                                 (call-process "zathura" nil 0 nil "--mode" "fullscreen" file)))))
+
+(setq bibtex-completion-pdf-open-function (lambda (file)
+                                            (call-process "zathura" nil 0 nil "--mode" "fullscreen" file)))
