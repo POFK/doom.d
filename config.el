@@ -176,3 +176,10 @@
 
 (setq bibtex-completion-pdf-open-function (lambda (file)
                                             (call-process "zathura" nil 0 nil "--mode" "fullscreen" file)))
+
+;; for racket lisp
+(use-package! racket-mode
+  :mode "\\.rkt\\'"  ; give it precedence over :lang scheme
+  :config
+  (set-formatter! 'raco-fmt '("raco" "fmt" "--width" "80") :modes '(racket-mode))
+  )
