@@ -153,11 +153,11 @@
 
 
 ;; python
-(setq conda-anaconda-home (expand-file-name "/opt/conda"))
-(setq conda-env-home-directory (expand-file-name "/opt/conda"))
+(setq conda-anaconda-home (expand-file-name "/opt/workspace/miniconda3"))
+(setq conda-env-home-directory (expand-file-name "/opt/workspace/miniconda3"))
 
 ;; golang
-(add-to-list 'load-path "/config/go/bin")
+(add-to-list 'load-path "/home/worker/go/bin")
 (autoload 'go-mode "go-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
 (add-hook 'go-mode-hook #'format-all-mode)
@@ -183,3 +183,10 @@
   :config
   (set-formatter! 'raco-fmt '("raco" "fmt" "--width" "80") :modes '(racket-mode))
   )
+
+;;(setq package-archives '(("gnu"    . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+;;                       ("nongnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/nongnu/")
+;;                         ("melpa"  . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+;;			 ("stable-melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/stable-melpa/")
+;;			 ("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
+

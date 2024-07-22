@@ -32,7 +32,7 @@
 
 ;; 自动保存词频，用于统计个人习惯(来自 ChatGPT, not checked)
 (setq pyim-enable-words-predict 'personal)
-(setq pyim-dcache-directory "/fasttank/workspace/cache/pyim/dcache/")
+(setq pyim-dcache-directory "/fastcache/cache/pyim/dcache/")
 ;;(setq pyim-dcache-directory "/config/.doom.d/pyim/dcache/")
 (setq pyim-dcache-auto-save-interval 3600)
 
