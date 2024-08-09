@@ -164,15 +164,15 @@
 
 ;; alias for arxiv
 
-;;(add-to-list 'org-link-abbrev-alist
-;;             '("arxiv" . "http://nexus.pangu.datalab/repository/arxivproxy/%s.pdf"))
-
 
 ;; open pdf using zathura in org and bibtex note
 (after! org
   (add-to-list 'org-file-apps
                '("\\.pdf\\'" . (lambda (file link)
-                                 (call-process "zathura" nil 0 nil "--mode" "fullscreen" file)))))
+                                 (call-process "zathura" nil 0 nil "--mode" "fullscreen" file))))
+  (add-to-list 'org-link-abbrev-alist
+               '("arxiv" . "https://nexus.pangu.datalab/repository/arxivproxy/%s.pdf"))
+  )
 
 (setq bibtex-completion-pdf-open-function (lambda (file)
                                             (call-process "zathura" nil 0 nil "--mode" "fullscreen" file)))
@@ -190,3 +190,7 @@
 ;;			 ("stable-melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/stable-melpa/")
 ;;			 ("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
 
+
+;; set default browser
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "google-chrome")
