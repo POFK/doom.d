@@ -155,6 +155,8 @@
 ;; python
 (setq conda-anaconda-home (expand-file-name "/opt/workspace/miniconda3"))
 (setq conda-env-home-directory (expand-file-name "/opt/workspace/miniconda3"))
+                                        ;(setq python-pytest-executable "tox run -- pytest")
+(setq python-pytest-executable "tox run --")
 
 ;; golang
 (add-to-list 'load-path "/home/worker/go/bin")
@@ -170,6 +172,8 @@
   (add-to-list 'org-file-apps
                '("\\.pdf\\'" . (lambda (file link)
                                  (call-process "zathura" nil 0 nil "--mode" "fullscreen" file))))
+  (add-to-list 'org-file-apps
+               '("\\.x?html?\\'" . "google-chrome %s"))
   (add-to-list 'org-link-abbrev-alist
                '("arxiv" . "https://nexus.pangu.datalab/repository/arxivproxy/%s.pdf"))
   )
