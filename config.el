@@ -198,3 +198,8 @@
 ;; set default browser
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "google-chrome")
+
+
+;; set for plantuml
+(setq plantuml-executable-path "/usr/bin/plantuml")
+(setq plantuml-default-exec-mode 'executable)
