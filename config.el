@@ -162,7 +162,7 @@
 (add-to-list 'load-path "/home/worker/go/bin")
 (autoload 'go-mode "go-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
-(add-hook 'go-mode-hook #'format-all-mode)
+;(add-hook 'go-mode-hook #'format-all-mode)
 
 ;; alias for arxiv
 
@@ -187,13 +187,6 @@
   :config
   (set-formatter! 'raco-fmt '("raco" "fmt" "--width" "80") :modes '(racket-mode))
   )
-
-;;(setq package-archives '(("gnu"    . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-;;                       ("nongnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/nongnu/")
-;;                         ("melpa"  . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-;;			 ("stable-melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/stable-melpa/")
-;;			 ("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
-
 
 ;; set default browser
 (setq browse-url-browser-function 'browse-url-generic
