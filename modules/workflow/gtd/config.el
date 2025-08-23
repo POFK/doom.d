@@ -17,7 +17,7 @@
 (defun +txmao/gtd-init-keywards-hook ()
   (setq org-todo-keywords
         (quote ((sequence "TODO(t)" "InProgress(i)" "REVIEW(r)" "|" "DONE(d!/!)" "CANCELLED(c@/!)")
-                (sequence "PLAN(p)" "OKR(o)" "|" "DONE(d!/!)" "CANCELLED(c@/!)")
+                (sequence "PLAN(p)" "|" "DONE(d!/!)" "CANCELLED(c@/!)")
                 (sequence "MAYBE(m!/@)" "WAITING(w@/!)" "DELEGATED(e!)" "|" "CANCELLED(c@/!)")))
         org-todo-repeat-to-state "PLAN")
 
@@ -29,7 +29,6 @@
 
   (setq org-todo-keyword-faces
         `(("PLAN" . +org-todo-active)
-          ("OKR" . +org-todo-active)
           ("TODO" . +org-todo-active)
           ("InProgress" . +org-todo-active)
           ("REVIEW" . +org-todo-onhold)
@@ -40,7 +39,7 @@
           ))
 
   (setq org-agenda-prefix-format
-        '((agenda . " %i %-12:c%?-12t% s")
+        '((agenda . " %i %-12:c%?-12t% s%?-12b ")
           (todo   . " %?-6b ")
           (tags   . " %i %-12:c")
           (search . " %i %-12:c")))
@@ -105,7 +104,7 @@
                     ((org-agenda-span 7)
                      (org-agenda-start-on-weekday nil)
                      (org-agenda-start-day "-3d")
-                     (org-deadline-warning-days 60)))
+                     (org-deadline-warning-days 180)))
             (tags "INBOX"
                   ((org-agenda-overriding-header "Inbox")
                    (org-agenda-files '(, (expand-file-name txmao/gtd-inbox-file)))
@@ -114,10 +113,10 @@
                   ((org-agenda-overriding-header "In Progress")
                    (org-agenda-files '(, (expand-file-name txmao/gtd-tasks-file)))
                    ))
-            (todo "OKR"
-                  ((org-agenda-overriding-header "OKRs")
-                   (org-agenda-files '(, (expand-file-name txmao/gtd-okrs-file)))
-                   ))
+            (alltodo ""
+                     ((org-agenda-overriding-header "OKRs")
+                      (org-agenda-files '(, (expand-file-name txmao/gtd-okrs-file)))
+                      ))
             (todo "REVIEW"
                   ((org-agenda-overriding-header "Review")
                    (org-agenda-files '(, (expand-file-name txmao/gtd-tasks-file)))
@@ -145,7 +144,8 @@
                    (org-agenda-files '(, (expand-file-name txmao/gtd-read-later-file)))
                    ))
             ))
-          )))
+          ))
+  )
 
 ;; capturing
 (defun capture-mails ())
