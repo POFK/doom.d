@@ -38,7 +38,7 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "/tank/data/dataset/org/")
-
+(setq org-agenda-files '("/tank/data/dataset/org/gtd"))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -162,7 +162,7 @@
 (add-to-list 'load-path "/home/worker/go/bin")
 (autoload 'go-mode "go-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
-;(add-hook 'go-mode-hook #'format-all-mode)
+                                        ;(add-hook 'go-mode-hook #'format-all-mode)
 
 ;; alias for arxiv
 
