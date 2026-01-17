@@ -2,5 +2,6 @@
 #+CATEGORY: READ
 #+FILETAGS: READ
 
-* arxiv:1232.11231
-balabala
+* title
+link: [[arxiv:0000.0000]]
+note: xxx

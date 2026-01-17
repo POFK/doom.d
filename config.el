@@ -175,7 +175,7 @@
   (add-to-list 'org-file-apps
                '("\\.x?html?\\'" . "google-chrome %s"))
   (add-to-list 'org-link-abbrev-alist
-               '("arxiv" . "https://nexus.pangu.datalab/repository/arxivproxy/%s.pdf"))
+               '("arxiv" . "http://dev.pangu.datalab:7788/arxiv/%s"))
   )
 
 (setq bibtex-completion-pdf-open-function (lambda (file)
