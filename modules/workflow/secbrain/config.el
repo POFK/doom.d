@@ -52,7 +52,7 @@
 (add-hook 'window-buffer-change-functions 'tim/org-roam-buffer-show)
 
 ;; mu4e
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e")
+;(add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e")
 
 ;; mu4e-views
 ;; (use-package! mu4e-views
