@@ -73,8 +73,8 @@
           glibcLocales
 
           binutils
-	  gnumake
-	  libgcc	
+          gnumake
+          libgcc
 
           git
           ripgrep
@@ -89,8 +89,17 @@
           # services.plantuml-server.enable = true;
           prettier
 
+          # chinese input
           librime
 
+          # lsp server
+          gopls
+          astro-language-server
+          libclang
+          csharp-ls
+          cmake-language-server
+          nixd
+          nil
         ];
         shellHook = ''
           echo "=== Doom Emacs Test Environment ==="
