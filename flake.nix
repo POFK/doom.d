@@ -67,7 +67,8 @@
         };
 
       devShells.${system}.default = pkgs.mkShell {
-        buildInputs = with pkgs; [
+        #buildInputs = with pkgs; [
+        packages = with pkgs; [
           my-doom-emacs
           bash
           glibcLocales
@@ -95,11 +96,16 @@
           # lsp server
           gopls
           astro-language-server
+          # c
           libclang
           csharp-ls
           cmake-language-server
+          # nix
           nixd
           nil
+          # js, ts
+          typescript-language-server
+          typespec
         ];
         shellHook = ''
           echo "=== Doom Emacs Test Environment ==="

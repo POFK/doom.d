@@ -71,7 +71,7 @@
        :emacs
        dired             ; making dired pretty [functional]
        electric          ; smarter, keyword-based electric-indent
-; todo ;;eww               ; the internet is gross
+                                        ; todo ;;eww               ; the internet is gross
        ;;ibuffer           ; interactive buffer management
        tramp             ; remote files at your arthritic fingertips
        undo              ; persistent, smarter undo for your inevitable mistakes
@@ -93,14 +93,14 @@
        ;;biblio            ; Writes a PhD for you (citation needed)
        ;;collab            ; buffers with friends
        ;;debugger          ; FIXME stepping through code, to help you add bugs
-; todo ;;direnv
+                                        ; todo ;;direnv
        ;;docker
        ;;editorconfig      ; let someone else argue about tabs vs spaces
        ;;ein               ; tame Jupyter notebooks with emacs
        (eval +overlay)     ; run code, run (also, repls)
        lookup              ; navigate your code and its documentation
-; todo ;;llm               ; when I said you needed friends, I didn't mean...
-       ;(lsp +eglot)      ; M-x vscode
+                                        ; todo ;;llm               ; when I said you needed friends, I didn't mean...
+                                        ;(lsp +eglot)      ; M-x vscode
        lsp      	   ; M-x vscode
        magit             ; a git porcelain for Emacs
        ;;make              ; run make tasks from Emacs
@@ -160,7 +160,7 @@
        ;;ocaml             ; an objective camel
        (org +roam +hugo +dragndrop +jupyter)    ; organize your plain life in plain text
        ;;php               ; perl's insecure younger brother
-; todo ;;plantuml          ; diagrams for confusing people more
+                                        ; todo ;;plantuml          ; diagrams for confusing people more
        ;;graphviz          ; diagrams for confusing yourself even more
        ;;purescript        ; javascript, but functional
        (python +lsp +tree-sitter +pyenv) ; beautiful is better than ugly
@@ -204,10 +204,11 @@
        gtd
        secbrain
        chinese           ; TODO need a document for setting the rime input method and optimize the config.el
-       ;pangu            ; TODO this module is outdated
-       ;refs             ; This module is outdated
+                                        ;pangu            ; TODO this module is outdated
+                                        ;refs             ; This module is outdated
 
        :mylang
        python
+       typespec
 
        )
