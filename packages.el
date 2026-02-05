@@ -54,3 +54,4 @@
 ;; (unpin! t)
 
 (package! typespec-ts-mode)
+(package! protobuf-mode)
